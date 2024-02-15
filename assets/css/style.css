@@ -1,0 +1,181 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 2%;
+    background-color: hsl(30, 54%, 90%);
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.font-outfit{    
+    font-family: "Outfit", sans-serif;
+}
+
+.font-young{    
+    font-family: "Young Serif", serif;
+}
+
+.container-padding{
+    padding: 0px 30px 30px;
+}
+
+ul{
+    list-style: none;    
+    margin-top: 10px;
+}
+
+ul li{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul li::before {
+    font-size: 24px;
+    content: "•"; 
+    margin-right: 15px; 
+}
+
+/* Section recipe banner */
+
+.recipe-banner{
+    padding: 30px;
+}
+
+.recipe-banner img{
+    width: 100%;
+    object-fit: cover;    
+    border-radius: 20px;
+}
+
+/* Section recipe introduction */
+
+.recipe-intro h1{
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.recipe-intro p{
+    margin-top: 10px;
+    font-size: 16px;
+    color: hsl(24, 5%, 18%);
+}
+
+/* Section recipe preparation */
+
+.recipe-preparation{
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: hsl(330, 100%, 98%);
+}
+
+.recipe-preparation h2{
+    color: hsl(332, 51%, 32%);
+}
+
+.recipe-preparation ul li::before{    
+    color: hsl(332, 51%, 32%); 
+}
+
+/* Section recipe ingredients */
+
+.recipe-ingredients h2,
+.recipe-instructions h2,
+.recipe-nutrition h2{    
+    font-size: 28px;
+    font-weight: 400;
+    color: hsl(14, 45%, 36%);
+}
+
+.recipe-ingredients ul li::before{
+    color: hsl(14, 45%, 36%);
+}
+
+/* Section recipe instructions */
+
+.recipe-instructions{
+    padding: 25px 0;
+    border-top: 1px solid hsl(30, 18%, 87%);
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.recipe-instructions ol {
+    list-style: none; 
+    counter-reset: item; 
+  }
+  
+  .recipe-instructions li {
+    position: relative; 
+    margin-left: 25px;
+    margin-top: 10px;
+  }
+  
+  .recipe-instructions li::before {
+    content: counter(item) ".";
+    counter-increment: item; 
+    color: hsl(14, 45%, 36%);
+    position: absolute;
+    left: -25px;
+  }
+
+  /* Section recipe nutrition   */
+
+.recipe-nutrition{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+table{
+    border-collapse: separate; 
+  border-spacing: 0; 
+}
+
+tr{
+    border: 1px solid blue;
+}
+
+table tr td{
+    padding: 10px 20px;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+table tr td:last-of-type{
+    color: hsl(332, 51%, 32%);
+}
+
+@media (max-width: 520px){    
+    body{
+        padding: 0;
+    }
+
+    .container{
+        border-radius: 0;
+    } 
+
+    .recipe-banner{
+        padding: 0 0 20px 0;
+    }
+
+    .recipe-banner img{
+        border-radius: 0;
+    }
+
+    .recipe-preparation{
+        padding: 15px;
+    }
+}
